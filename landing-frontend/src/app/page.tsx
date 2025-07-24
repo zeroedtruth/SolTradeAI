@@ -20,7 +20,7 @@ export default function Home() {
                 <p className="text-lg text-gray-700 dark:text-gray-300 mb-8 aos-init aos-animate"
                    data-aos="fade-down"
                    data-aos-delay="200">
-                  Optimize your DeFi trading with advanced AI models, real-time data feeds, and automated strategies on the Monad blockchain.
+                  Optimize your DeFi trading with advanced AI models, real-time data feeds, and automated strategies on the Solana blockchain.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4"
                      data-aos="fade-down"
@@ -33,7 +33,7 @@ export default function Home() {
                   </Link>
                   <Link
                     className="inline-flex items-center justify-center px-6 py-3 rounded-lg border border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
-                    href="https://github.com/MonadAI-xyz/monetai"
+                    href="https://github.com/zeroedtruth/SolTradeAI"
                   >
                     <Github className="mr-2" />
                     View on GitHub
@@ -49,7 +49,7 @@ export default function Home() {
                   <div className="relative animate-float shadow-2xl rounded-lg overflow-hidden">
                     <Image
                       src="/images/mockuper.png"
-                      alt="MonetAI Trading Dashboard"
+                      alt="SolTradeAI Trading Dashboard"
                       width={600}
                       height={400}
                       className="w-full h-auto"
@@ -67,7 +67,7 @@ export default function Home() {
             <div className="max-w-3xl mx-auto text-center mb-12">
               <h2 className="text-3xl font-bold mb-4">Key Features</h2>
               <p className="text-gray-600 dark:text-gray-400">
-                MonetAI combines AI, automation, and DeFi expertise to deliver a comprehensive trading solution
+                SolTradeAI combines AI, automation, and DeFi expertise to deliver a comprehensive trading solution
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -117,7 +117,7 @@ export default function Home() {
             <div className="max-w-3xl mx-auto text-center mb-12">
               <h2 className="text-3xl font-bold mb-4">How It Works</h2>
               <p className="text-gray-600 dark:text-gray-400">
-                Get started with MonetAI in just a few simple steps
+                Get started with SolTradeAI in just a few simple steps
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -165,7 +165,7 @@ export default function Home() {
                 href="https://monetai.monadai.xyz/"
                 className="inline-flex items-center justify-center px-8 py-4 rounded-lg bg-primary text-white hover:bg-primary/90 transition-colors text-lg"
               >
-                Launch MonetAI
+                Launch SolTradeAI
               </Link>
             </div>
           </div>
@@ -176,7 +176,7 @@ export default function Home() {
           <div className="container mx-auto px-4">
             <div className="flex flex-col md:flex-row items-center justify-between">
               <p className="text-gray-600 dark:text-gray-400 mb-4 md:mb-0">
-                © 2024 MonetAI. All rights reserved.
+                © 2025 SolTradeAI. All rights reserved.
               </p>
               <div className="flex space-x-6">
                 <Link
@@ -186,7 +186,7 @@ export default function Home() {
                   <Twitter />
                 </Link>
                 <Link
-                  href="https://github.com/MonadAI-xyz/monetai"
+                  href="https://github.com/zeroedtruth/SolTradeAI"
                   className="text-gray-600 dark:text-gray-400 hover:text-primary"
                 >
                   <Github />
