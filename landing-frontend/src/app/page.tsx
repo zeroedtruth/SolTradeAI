@@ -1,104 +1,59 @@
 import Image from "next/image";
 import Header from "@/components/header";
 import Link from "next/link";
+import { Github, Twitter } from 'lucide-react';
 
 export default function Home() {
   return (
     <div className="grid grid-rows-[auto_1fr] min-h-screen">
       <Header />
       <main className="row-start-2 pb-6">
-        <section className="bg-gray-100 relative w-full">
+        <section className="bg-gray-100 dark:bg-gray-900 relative w-full">
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
-            <div className="relative min-h-screen z-1 pt-[200px] pb-[200px] lg:pt-72 lg:pb-96 flex items-center">
+            <div className="relative min-h-[80vh] z-1 pt-[100px] pb-[100px] lg:pt-32 lg:pb-32 flex items-center">
               {/* Left side - Text content */}
-              <div className="max-w-[85%] lg:max-w-[40%]">
-                <h1
-                  className="text-5xl font-bold text-black pb-4 aos-init aos-animate"
-                  data-aos="fade-down"
-                >
-                  Less stress when sharing expenses on trips.
+              <div className="max-w-[85%] lg:max-w-[50%]">
+                <h1 className="text-5xl font-bold text-black dark:text-white pb-4 aos-init aos-animate"
+                    data-aos="fade-down">
+                  AI-Powered DeFi Trading Agent
                 </h1>
-                <p
-                  className="text-lg text-gray-700 mb-8 aos-init aos-animate"
-                  data-aos="fade-down"
-                  data-aos-delay="200"
-                >
-                  Keep track of your shared expenses and balances with
-                  housemates, trips, groups, friends, and family.
+                <p className="text-lg text-gray-700 dark:text-gray-300 mb-8 aos-init aos-animate"
+                   data-aos="fade-down"
+                   data-aos-delay="200">
+                  Optimize your DeFi trading with advanced AI models, real-time data feeds, and automated strategies on the Monad blockchain.
                 </p>
-                <div
-                  className="max-w-xs mx-auto sm:max-w-none sm:inline-flex sm:justify-center space-y-4 sm:space-y-0 sm:space-x-4 aos-init aos-animate"
-                  data-aos="fade-down"
-                  data-aos-delay="400"
-                >
+                <div className="flex flex-col sm:flex-row gap-4"
+                     data-aos="fade-down"
+                     data-aos-delay="400">
                   <Link
-                    className="rounded-4xl text-white bg-[#3BE8B0] hover:bg-[#2dd19f] w-full transition duration-150 ease-in-out group py-3 px-5 font-semibold"
-                    href="https://app.solsplitter.com/"
+                    className="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-primary text-white hover:bg-primary/90 transition-colors"
+                    href="https://monetai.monadai.xyz/"
                   >
-                    Launch Sol Splitter
+                    Launch App
+                  </Link>
+                  <Link
+                    className="inline-flex items-center justify-center px-6 py-3 rounded-lg border border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+                    href="https://github.com/MonadAI-xyz/monetai"
+                  >
+                    <Github className="mr-2" />
+                    View on GitHub
                   </Link>
                 </div>
               </div>
 
               {/* Right side - Animated graphics */}
-              <div className="hidden lg:flex lg:w-[60%] justify-center items-center relative">
-                <div className="relative w-100 h-100">
-                  {/* Main SolSplitter image with floating animation */}
-                  <div className="relative animate-float w-full h-full">
+              <div className="hidden lg:block lg:w-[50%] relative">
+                {/* Add trading chart or dashboard mockup here */}
+                <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gradient-to-r from-primary/20 to-blue-500/20 rounded-full blur-3xl -z-10"></div>
+                <div className="relative">
+                  <div className="relative animate-float shadow-2xl rounded-lg overflow-hidden">
                     <Image
-                      src="/images/SolSplitter.png"
-                      alt="SolSplitter app interface"
-                      width={400}
+                      src="/images/mockuper.png"
+                      alt="MonetAI Trading Dashboard"
+                      width={600}
                       height={400}
-                      className="w-full h-full object-contain drop-shadow-2xl rounded-lg"
+                      className="w-full h-auto"
                     />
-                  </div>
-
-                  {/* Floating expense cards */}
-                  <div className="absolute top-2 -left-16 animate-bounce-slow">
-                    <div className="bg-white rounded-lg shadow-lg p-3 border-l-4 border-[#3BE8B0] transform rotate-12">
-                      <div className="text-sm font-semibold text-gray-800">Dinner</div>
-                      <div className="text-xs text-gray-600">$45.00</div>
-                    </div>
-                  </div>
-
-                  <div className="absolute top-16 -right-12 animate-bounce-slow-delayed">
-                    <div className="bg-white rounded-lg shadow-lg p-3 border-l-4 border-[#5AD6E6] transform -rotate-6">
-                      <div className="text-sm font-semibold text-gray-800">Gas</div>
-                      <div className="text-xs text-gray-600">$32.50</div>
-                    </div>
-                  </div>
-
-                  <div className="absolute bottom-8 -left-8 animate-bounce-slow-delayed-2">
-                    <div className="bg-white rounded-lg shadow-lg p-3 border-l-4 border-[#A17CFF] transform rotate-3">
-                      <div className="text-sm font-semibold text-gray-800">Hotel</div>
-                      <div className="text-xs text-gray-600">$120.00</div>
-                    </div>
-                  </div>
-
-                  {/* Floating icons */}
-                  <div className="absolute top-4 right-4 animate-pulse">
-                    <div className="w-12 h-12 bg-[#3BE8B0] rounded-full flex items-center justify-center">
-                      <span className="text-white text-lg font-bold">$</span>
-                    </div>
-                  </div>
-
-                  <div className="absolute top-12 left-4 animate-pulse-delayed">
-                    <div className="w-10 h-10 bg-[#5AD6E6] rounded-full flex items-center justify-center">
-                      <span className="text-white text-base font-bold">$</span>
-                    </div>
-                  </div>
-
-                  <div className="absolute bottom-8 left-12 animate-pulse">
-                    <div className="w-11 h-11 bg-[#A17CFF] rounded-full flex items-center justify-center">
-                      <span className="text-white text-base font-bold">$</span>
-                    </div>
-                  </div>
-
-                  <div className="absolute bottom-4 right-2 animate-pulse-delayed">
-                    <div className="w-6 h-6 bg-[#5AD6E6] rounded-full flex items-center justify-center">
-                      <span className="text-white text-xs font-bold">✓</span>
-                    </div>
                   </div>
                 </div>
               </div>
@@ -106,294 +61,140 @@ export default function Home() {
           </div>
         </section>
 
-        {/* <div className="container lg:flex items-center pt-8 pb-16">
-          <div className="hidden xl:w-1/12 xl:block" />
-          <div className="lg:w-5/12 xl:w-4/12 ">
-            <h1 className="text-center text-3xl lg:text-left lg:text-4xl font-bold leading-tight pt-8 lg:pt-0">
-              Less stress when sharing expenses on trips.
-            </h1>
-            <p className="text-lg my-6 max-w-xs">
-              Keep track of your shared expenses and balances with housemates,
-              trips, groups, friends, and family.
-            </p>
+        {/* Features Grid */}
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <div className="max-w-3xl mx-auto text-center mb-12">
+              <h2 className="text-3xl font-bold mb-4">Key Features</h2>
+              <p className="text-gray-600 dark:text-gray-400">
+                MonetAI combines AI, automation, and DeFi expertise to deliver a comprehensive trading solution
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg">
+                <h3 className="text-xl font-semibold mb-4">AI-Powered Trading</h3>
+                <p className="text-gray-600 dark:text-gray-400">
+                  Integrates predictive analytics and sentiment analysis to optimize trading decisions in real-time.
+                </p>
+              </div>
+              <div className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg">
+                <h3 className="text-xl font-semibold mb-4">Portfolio Management</h3>
+                <p className="text-gray-600 dark:text-gray-400">
+                  Automated risk management, asset rebalancing, and yield maximization strategies.
+                </p>
+              </div>
+              <div className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg">
+                <h3 className="text-xl font-semibold mb-4">DAO Governance</h3>
+                <p className="text-gray-600 dark:text-gray-400">
+                  Token holders can propose and vote on changes to risk management and trading strategies.
+                </p>
+              </div>
+              <div className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg">
+                <h3 className="text-xl font-semibold mb-4">Real-Time Analytics</h3>
+                <p className="text-gray-600 dark:text-gray-400">
+                  Live market data feeds and automated trade insights for informed decision-making.
+                </p>
+              </div>
+              <div className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg">
+                <h3 className="text-xl font-semibold mb-4">Multi-Chain Ready</h3>
+                <p className="text-gray-600 dark:text-gray-400">
+                  Built for expansion to multiple chains while leveraging Monad's high-performance infrastructure.
+                </p>
+              </div>
+              <div className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg">
+                <h3 className="text-xl font-semibold mb-4">Automated Trading</h3>
+                <p className="text-gray-600 dark:text-gray-400">
+                  Set up automated trading strategies that execute trades based on predefined conditions.
+                </p>
+              </div>
+            </div>
           </div>
-          <div className="lg:w-7/12 text-center">
-            <Image
-              className="shadow-xl hover:shadow-2xl transition-all ease-in-out rounded-lg mx-auto"
-              src="/images/group-detail.webp"
-              alt=""
-              width={400}
-              height={400}
-            />
-          </div>
-        </div> */}
+        </section>
 
-        <div className="lg:flex lg:flex-wrap">
-          <div className="bg-facets w-full text-white pt-8 bg-[#373B3F] lg:h-landing-feature lg:w-1/2">
-            <div className="flex flex-col align-center justify-between h-full">
-              <div>
-                <h1 className="text-2xl text-center font-mont">
-                  Track balances
-                </h1>
-                <p className="text-center block mx-auto px-8 mt-2 text-lg mb-9 max-w-95">
-                  Keep track of shared expenses, balances, and who owes who.
+        {/* How It Works */}
+        <section className="py-20 bg-gray-50 dark:bg-gray-900">
+          <div className="container mx-auto px-4">
+            <div className="max-w-3xl mx-auto text-center mb-12">
+              <h2 className="text-3xl font-bold mb-4">How It Works</h2>
+              <p className="text-gray-600 dark:text-gray-400">
+                Get started with MonetAI in just a few simple steps
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              <div className="text-center">
+                <div className="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-4">1</div>
+                <h3 className="text-xl font-semibold mb-2">Connect Wallet</h3>
+                <p className="text-gray-600 dark:text-gray-400">
+                  Connect your Web3 Monad Native wallet to get started.
                 </p>
               </div>
-              <Image
-                className="mx-auto w-65 lg:w-81"
-                src="/images/friends-1.png"
-                alt=""
-                width={400}
-                height={400}
-              />
-            </div>
-          </div>
-          <div className="bg-facets w-full text-white pt-8 bg-primary h-sm-landing-feature lg:h-landing-feature lg:w-1/2">
-            <div className="flex flex-col align-center justify-between h-full">
-              <div>
-                <h1 className="text-2xl text-center">Organize expenses</h1>
-                <p className="text-center block mx-auto px-8 mt-2 text-lg mb-9 max-w-95">
-                  Split expenses with any group: trips, housemates, friends, and
-                  family.
+              <div className="text-center">
+                <div className="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-4">2</div>
+                <h3 className="text-xl font-semibold mb-2">Fund Account</h3>
+                <p className="text-gray-600 dark:text-gray-400">
+                  Load your account with tokens on the Monad chain.
                 </p>
               </div>
-              <Image
-                className="mx-auto w-65 lg:w-81"
-                src="/images/group-1.png"
-                alt=""
-                width={400}
-                height={400}
-              />
-            </div>
-          </div>
-          <div className="bg-facets w-full text-white pt-8 bg-orange-400 lg:h-landing-feature lg:w-1/2">
-            <div className="flex flex-col align-center justify-between h-full">
-              <div>
-                <h1 className="text-2xl text-center">Add expenses easily</h1>
-                <p className="text-center block mx-auto px-8 mt-2 text-lg mb-9 max-w-95">
-                  Quickly add expenses on the go before you forget who paid.
+              <div className="text-center">
+                <div className="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-4">3</div>
+                <h3 className="text-xl font-semibold mb-2">Configure AI</h3>
+                <p className="text-gray-600 dark:text-gray-400">
+                  Set your trading preferences and risk parameters.
                 </p>
               </div>
-              <Image
-                className="mx-auto w-65 lg:w-81"
-                src="/images/add-expense-1.png"
-                alt=""
-                width={400}
-                height={400}
-              />
-            </div>
-          </div>
-          <div className="bg-facets w-full text-white pt-8 bg-[#373B3F] lg:h-landing-feature lg:w-1/2">
-            <div className="flex flex-col align-center justify-between h-full">
-              <div>
-                <h1 className="text-2xl text-center">Pay friends back</h1>
-                <p className="text-center block mx-auto px-8 mt-2 text-lg mb-9 max-w-95">
-                  Settle up with a friend and record any cash or online payment.
+              <div className="text-center">
+                <div className="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-4">4</div>
+                <h3 className="text-xl font-semibold mb-2">Start Trading</h3>
+                <p className="text-gray-600 dark:text-gray-400">
+                  Let the AI agent trade autonomously on your behalf.
                 </p>
               </div>
-              <Image
-                className="mx-auto w-65 lg:w-81"
-                src="/images/settle-up-1.png"
-                alt=""
-                width={400}
-                height={400}
-              />
             </div>
           </div>
+        </section>
 
-          <div className="bg-facets w-full text-white pt-8 h-landing-feature bg-secondary flex-col lg:flex-row flex justify-between lg:flex">
-            <div className="lg:w-1/2">
-              <div className="lg:flex lg:flex-col lg:justify-center lg:h-full">
-                <h1 className="text-2xl text-center">Get even more with PRO</h1>
-                <p className="text-center block mt-2 text-lg mb-6 max-w-95 mx-auto">
-                  Get even more organized with receipt scanning, charts and
-                  graphs, currency conversion, and more!
-                </p>
-                <div className="flex justify-center  mb-4">
-                  <Link
-                    className="mx-auto px-10 py-3 border border-white shadow text-white font-mont font-semibold rounded"
-                    href="https://app.solsplitter.com/"
-                  >
-                    Launch
-                  </Link>
-                </div>
-              </div>
-            </div>
-            <div className="lg:w-1/2">
-              <div className="lg:flex lg:flex-col lg:justify-end lg:h-full">
-                <Image
-                  className="w-65 lg:w-81 mx-auto"
-                  src="/images/details-1.png"
-                  alt=""
-                  width={400}
-                  height={400}
-                />
-              </div>
+        {/* Call to Action */}
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <div className="max-w-3xl mx-auto text-center">
+              <h2 className="text-3xl font-bold mb-4">Ready to Get Started?</h2>
+              <p className="text-gray-600 dark:text-gray-400 mb-8">
+                Join the future of AI-powered DeFi trading on Monad
+              </p>
+              <Link
+                href="https://monetai.monadai.xyz/"
+                className="inline-flex items-center justify-center px-8 py-4 rounded-lg bg-primary text-white hover:bg-primary/90 transition-colors text-lg"
+              >
+                Launch MonetAI
+              </Link>
             </div>
           </div>
-        </div>
+        </section>
 
-        <div className="container">
-          <h1 className="text-center mt-10 text-2xl lg:text-4xl lg:mb-12 lg:mt-24 font-bold">
-            The whole nine yards
-          </h1>
-          <ul className="feature-list columns-2 md:columns-3 text-sm mt-4 mx-auto">
-            <li>
-              <div>
-                <i className="core-icon"></i>
-                <span>Add groups and friends</span>
+        {/* Footer */}
+        <footer className="py-12 bg-gray-50 dark:bg-gray-900">
+          <div className="container mx-auto px-4">
+            <div className="flex flex-col md:flex-row items-center justify-between">
+              <p className="text-gray-600 dark:text-gray-400 mb-4 md:mb-0">
+                © 2024 MonetAI. All rights reserved.
+              </p>
+              <div className="flex space-x-6">
+                <Link
+                  href="https://twitter.com/MonetAI_xyz"
+                  className="text-gray-600 dark:text-gray-400 hover:text-primary"
+                >
+                  <Twitter />
+                </Link>
+                <Link
+                  href="https://github.com/MonadAI-xyz/monetai"
+                  className="text-gray-600 dark:text-gray-400 hover:text-primary"
+                >
+                  <Github />
+                </Link>
               </div>
-            </li>
-            <li>
-              <div>
-                <i className="core-icon"></i>
-                <span>Split expenses, record debts</span>
-              </div>
-            </li>
-            <li>
-              <div>
-                <i className="core-icon"></i>
-                <span>Equal or unequal splits</span>
-              </div>
-            </li>
-            <li>
-              <div>
-                <i className="core-icon"></i>
-                <span>Split by % or shares</span>
-              </div>
-            </li>
-            <li>
-              <div>
-                <i className="core-icon"></i>
-                <span>Calculate total balances</span>
-              </div>
-            </li>
-            <li>
-              <div>
-                <i className="core-icon"></i>
-                <span>Simplify debts</span>
-              </div>
-            </li>
-            <li>
-              <div>
-                <i className="core-icon"></i>
-                <span>Recurring expenses</span>
-              </div>
-            </li>
-            <li>
-              <div>
-                <i className="core-icon"></i>
-                <span>Offline mode</span>
-              </div>
-            </li>
-            <li>
-              <div>
-                <i className="core-icon"></i>
-                <span>Cloud sync</span>
-              </div>
-            </li>
-            <li>
-              <div>
-                <i className="core-icon"></i>
-                <span>Spending totals</span>
-              </div>
-            </li>
-            <li>
-              <div>
-                <i className="core-icon"></i>
-                <span>Categorize expenses</span>
-              </div>
-            </li>
-            <li>
-              <div>
-                <i className="core-icon"></i>
-                <span>7+ languages</span>
-              </div>
-            </li>
-            <li>
-              <div>
-                <i className="core-icon"></i>
-                <span>100+ currencies</span>
-              </div>
-            </li>
-            <li>
-              <div>
-                <i className="core-icon"></i>
-                <span>Payment integrations</span>
-              </div>
-            </li>
-            <li>
-              <div>
-                <i className="pro-icon"></i>
-                <span>Unlimited expenses</span>
-              </div>
-            </li>
-            <li>
-              <div>
-                <i className="pro-icon"></i>
-                <span>Transaction import</span>
-              </div>
-            </li>
-            <li>
-              <div>
-                <i className="pro-icon"></i>
-                <span>Currency conversion</span>
-              </div>
-            </li>
-            <li>
-              <div>
-                <i className="pro-icon"></i>
-                <span>Receipt scanning</span>
-              </div>
-            </li>
-            <li>
-              <div>
-                <i className="pro-icon"></i>
-                <span>Itemization</span>
-              </div>
-            </li>
-            <li>
-              <div>
-                <i className="pro-icon"></i>
-                <span>Charts and graphs</span>
-              </div>
-            </li>
-            <li>
-              <div>
-                <i className="pro-icon"></i>
-                <span>Expense search</span>
-              </div>
-            </li>
-            <li>
-              <div>
-                <i className="pro-icon"></i>
-                <span>Save default splits</span>
-              </div>
-            </li>
-            <li>
-              <div>
-                <i className="pro-icon"></i>
-                <span>A totally ad-free experience</span>
-              </div>
-            </li>
-            <li>
-              <div>
-                <i className="pro-icon"></i>
-                <span>Early access to new features</span>
-              </div>
-            </li>
-          </ul>
-          <div className="flex items-center justify-center text-xs mt-8">
-            <i className="core-icon"></i>
-            <span className="ml-1 mr-6 text-charcoal lg:text-xl">
-              Core features
-            </span>
-            {/* <i className="pro-icon"></i>
-            <span className="ml-2 text-purple-light lg:text-xl">
-              Pro features
-            </span> */}
+            </div>
           </div>
-        </div>
+        </footer>
       </main>
     </div>
   );
