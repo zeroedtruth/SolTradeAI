@@ -98,7 +98,7 @@ export default function Home() {
               <div className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg">
                 <h3 className="text-xl font-semibold mb-4">Multi-Chain Ready</h3>
                 <p className="text-gray-600 dark:text-gray-400">
-                  Built for expansion to multiple chains while leveraging Monad's high-performance infrastructure.
+                  Built for expansion to multiple chains while leveraging Monads high-performance infrastructure.
                 </p>
               </div>
               <div className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg">
